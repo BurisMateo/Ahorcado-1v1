@@ -1,0 +1,76 @@
+
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: "Reenie Beanie", sans-serif;
+    background-color: #f5f5f598;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo {
+    font-family: "Reenie Beanie", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.container {
+    background-color: transparent;
+    background-image: url("./src/PapelFondo1.png");
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.teclado {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.teclado button {
+    font-family: "Reenie Beanie", sans-serif;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.teclado button:hover {
+    background-color: #ffffff;
+}
+
+.teclado button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.mostrarPalabra {
+    font-family: "Reenie Beanie", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin: 30px 0;
+    min-height: 50px;
+}
