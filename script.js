@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let palabraElegida = [];
     let intentosRestantes = 6;
 
+    const modal = document.getElementById('modalReglas');
+    const btnEntendido = document.getElementById('btnEntendido');
+
+    // Función para cerrar el cartel
+    btnEntendido.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
     function iniciarJuego() {
         actualizarMostrarPalabra([]);
         establecerPalabra();
