@@ -20,7 +20,7 @@ body {
 
 .container {
     background-color: #fff;
-    background-image: url("./src/PapelFondo1.png");
+    background-image: url("./src/fondo.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -107,7 +107,7 @@ body {
 }
 
 .modal-contenido {
-    background-image: url("./src/PapelFondo1.png");
+    background-image: url("./src/fondo.jpg");
     background-color: white;
     background-size: cover;
     padding: 30px;
@@ -161,3 +161,4 @@ body {
         font-size: 2.2rem;
     }
 }
+
