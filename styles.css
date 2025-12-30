@@ -42,12 +42,18 @@ body {
 
 .mostrarPalabra {
     font-family: "Indie Flower", cursive;
-    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    /* Reducimos un poco el tamaño base para móviles */
+    font-size: clamp(1.4rem, 5vw, 2.5rem); 
     font-weight: bold;
-    letter-spacing: 5px;
-    margin: 20px 0;
+    letter-spacing: 3px; /* Reducimos el espacio entre letras en móvil */
+    margin: 15px 0;
     min-height: 45px;
-    word-break: break-all;
+    
+    /* SOLUCIÓN AL CORTE: */
+    word-break: normal;       /* No rompe palabras a la mitad */
+    overflow-wrap: break-word; /* Solo rompe si es estrictamente necesario */
+    white-space: normal;      /* Permite que el texto fluya */
+    display: block;           /* Asegura que ocupe su propio espacio */
 }
 
 .teclado {
@@ -162,4 +168,19 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .mostrarPalabra {
+        font-size: 1.2rem; /* Tamaño más pequeño para frases largas */
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+    
+    .titulo {
+        font-size: 2rem;
+        margin-top: 5px;
+    }
 
+    .ahorcado-image {
+        max-height: 150px; /* Imagen más pequeña para dejar espacio al texto */
+    }
+}
