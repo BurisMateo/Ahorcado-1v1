@@ -138,7 +138,7 @@ body {
     padding: 10px 30px;
     cursor: pointer;
     background-color: #4CAF50;
-    color: white;
+    color: black;
     border: none;
     border-radius: 8px;
     box-shadow: 2px 2px 0px #2e6b31;
@@ -161,4 +161,5 @@ body {
         font-size: 2.2rem;
     }
 }
+
 
