@@ -141,10 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
         teclado.innerHTML = '';
         if(esVictoria){
             ahorcado.src = `./src/AhorcadoWin.png`;
-            mostrarPalabra.textContent = '¡Felicidades! Ganaste. La palabra era: ' + palabraElegida.join('');
+            mostrarPalabra.innerHTML = '¡Felicidades! Ganaste.<br>La palabra era: ' + palabraElegida.join('');
         }else{
             ahorcado.src = `./src/AhorcadoGameOver.png`;
-            mostrarPalabra.textContent = 'Juego Terminado, la palabra era: ' + palabraElegida.join('');
+            mostrarPalabra.innerHTML = 'Juego Terminado.<br>La palabra era: ' + palabraElegida.join('');
         }
         const reiniciarBtn = document.createElement('button');
         reiniciarBtn.textContent = 'Reiniciar';
