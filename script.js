@@ -50,6 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
         botonConfirmar.addEventListener('click', () => {comenzarAdivinanza()})
         teclado.appendChild(botonConfirmar);
 
+        //Botón de reglas
+        const botonReglas = document.createElement('button');
+        botonReglas.textContent = 'Reglas';
+        botonReglas.style.backgroundColor = '#2196F3';
+        botonReglas.style.width = '80px';
+        botonReglas.addEventListener('click', () => {modal.style.display = 'flex';});
+        teclado.appendChild(botonReglas);
     }
 
 
@@ -119,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             botones.forEach(boton => {
                 if(boton.textContent === letra){
                     boton.style.backgroundColor = '#4CAF50';
+                    boton.style.color = '#000';
                     boton.disabled = true;
                 }
             });
@@ -127,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             botones.forEach(boton => {
                 if(boton.textContent === letra){
                     boton.style.backgroundColor = '#f44336';
+                    boton.style.color = '#000';
                     boton.disabled = true;
                 }
             });
