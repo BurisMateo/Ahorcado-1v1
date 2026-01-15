@@ -11,9 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modalReglas');
     const btnEntendido = document.getElementById('btnEntendido');
 
+    // 1. Verificamos si ya se mostró en ESTA sesión
+    if (sessionStorage.getItem('reglasMostradas') === 'true') {
+        modal.style.display = 'none'; // Si ya se mostró, lo ocultamos
+    } else {
+        modal.style.display = 'flex'; // Si es la primera vez en la pestaña, lo mostramos
+    }
+
     // Función para cerrar el cartel
     btnEntendido.addEventListener('click', () => {
         modal.style.display = 'none';
+        sessionStorage.setItem('reglasMostradas', 'true');
     });
 
     function iniciarJuego() {
@@ -52,9 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //Botón de reglas
         const botonReglas = document.createElement('button');
-        botonReglas.textContent = 'Reglas';
+        botonReglas.textContent = '?';
         botonReglas.style.backgroundColor = '#2196F3';
-        botonReglas.style.width = '80px';
         botonReglas.addEventListener('click', () => {modal.style.display = 'flex';});
         teclado.appendChild(botonReglas);
     }
